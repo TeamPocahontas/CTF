@@ -11,3 +11,11 @@ server {
         try_files $uri $uri/ =404;
     }
 }
+
+server {
+    listen 443 ssl;
+    ssl_certificate server.crt;
+    ssl_certificate_key server.key;
+
+    ssl_session_ticket_key ticket.key;
+}
