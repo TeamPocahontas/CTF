@@ -1,4 +1,5 @@
 FROM ubuntu:trusty
+
 MAINTAINER JEP
 
 RUN apt-get update && \
