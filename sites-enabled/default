@@ -10,6 +10,11 @@ server {
     location / {
         try_files $uri $uri/ =404;
     }
+    
+    location ~ \.(png|jpg) {
+        add_header ETag "flag7583758";
+        try_files $uri $uri/ =404;
+    }
 }
 
 server {
