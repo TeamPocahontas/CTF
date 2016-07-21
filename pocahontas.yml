@@ -1,4 +1,4 @@
 nginx:
-  image: teampocahontas/nginx
+  image: pocahontas/ctf
   ports:
     - 80:80
