@@ -2,3 +2,4 @@ nginx:
   image: pocahontas/ctf
   ports:
     - 80:80
+    - 443:443
