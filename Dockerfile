@@ -12,5 +12,6 @@ ADD sites-enabled/ /etc/nginx/sites-enabled/
 ADD app/ /app/
 
 EXPOSE 80
+EXPOSE 443
 
 CMD ["/usr/sbin/nginx"]
