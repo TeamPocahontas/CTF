@@ -1,5 +1,5 @@
 FROM ubuntu:trusty
-MAINTAINER Feng Honglin <hfeng@tutum.co>
+MAINTAINER JEP
 
 RUN apt-get update && \
     apt-get install -y nginx && \
