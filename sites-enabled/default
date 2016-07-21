@@ -20,12 +20,20 @@ server {
 server {
     listen 443 ssl;
     
+    root /app;
+    index index.html index.htm;
+    
     ssl_certificate /app/server.crt;
     ssl_certificate_key /app/server.key;
     
     # ssl_session_ticket_key /app/ticket.key;
     
     location / {
+        try_files $uri $uri/ =404;
+    }
+    
+    location ~ \.(png|jpg) {
+        add_header ETag "flag7583758";
         try_files $uri $uri/ =404;
     }
 }
