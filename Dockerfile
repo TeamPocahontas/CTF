@@ -11,7 +11,6 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 ADD sites-enabled/ /etc/nginx/sites-enabled/
 ADD app/ /app/
 
-EXPOSE 80
-EXPOSE 443
+EXPOSE 80 443
 
 CMD ["/usr/sbin/nginx"]
