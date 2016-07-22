@@ -15,7 +15,8 @@ ADD app/ /app/
 ADD certs/ /etc/certs
 ADD flags/ /flags
 
-run /scripts/init.sh
+RUN chmod +x /scripts/init.sh
+RUN /scripts/init.sh
 
 EXPOSE 80 443
 
