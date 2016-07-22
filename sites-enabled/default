@@ -27,6 +27,9 @@ server {
     ssl_certificate_key /app/server.key;
     
     ssl_session_ticket_key /app/ticket.key;
+    ssl_session_tickets on;
+    ssl_session_timeout 666;
+    
     
     location / {
         try_files $uri $uri/ =404;
