@@ -28,7 +28,7 @@ server {
     
     ssl_session_ticket_key /app/ticket.key;
     ssl_session_tickets on;
-    ssl_session_timeout 666;
+    ssl_session_timeout 1337;
     
     
     location / {
