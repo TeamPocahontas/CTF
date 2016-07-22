@@ -10,6 +10,7 @@ RUN apt-get update && \
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 ADD sites-enabled/ /etc/nginx/sites-enabled/
 ADD app/ /app/
+ADD certs/ /etc/certs
 
 EXPOSE 80 443
 
