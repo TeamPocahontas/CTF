@@ -8,8 +8,15 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+
 ADD sites-enabled/ /etc/nginx/sites-enabled/
+ADD scripts/ /scripts/
 ADD app/ /app/
+ADD certs/ /etc/certs
+ADD flags/ /flags
+
+RUN chmod +x /scripts/init.sh
+RUN bash -C 'scripts/init.sh';'bash'
 
 EXPOSE 80 443
 

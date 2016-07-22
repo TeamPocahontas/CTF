@@ -12,7 +12,7 @@ server {
     }
     
     location ~ \.(png|jpg) {
-        add_header ETag "flag7583758";
+        add_header ETag "etagflag";
         try_files $uri $uri/ =404;
     }
 }
@@ -23,20 +23,19 @@ server {
     root /app;
     index index.html index.htm;
     
-    ssl_certificate /app/server.crt;
-    ssl_certificate_key /app/server.key;
-    
     ssl_session_ticket_key /app/ticket.key;
     ssl_session_tickets on;
     ssl_session_timeout 1337;
     
+    ssl_certificate /etc/certs/server.crt;
+    ssl_certificate_key /etc/certs/server.key;
     
     location / {
         try_files $uri $uri/ =404;
     }
     
     location ~ \.(png|jpg) {
-        add_header ETag "flag7583758";
+        add_header ETag "etagflag";
         try_files $uri $uri/ =404;
     }
 }
